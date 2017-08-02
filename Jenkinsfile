@@ -1,6 +1,6 @@
 node{
 stage('parameters'){
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '5', daysToKeepStr: '5', numToKeepStr: '5')), parameters([choice(choices: ['list'], description: '', name: 'GERRIT_BRANCH')]), pipelineTriggers([])])
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '5', daysToKeepStr: '5', numToKeepStr: '5')), parameters([choice(choices: 'list', description: '', name: 'GERRIT_BRANCH')]), pipelineTriggers([])])
 }
 stage('java version'){
 java('1.7')
